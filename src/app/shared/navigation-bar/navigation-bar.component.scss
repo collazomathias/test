@@ -1,0 +1,10 @@
+$font-color: rgb(206, 206, 206);
+
+.navigation-bar-container {
+    width: calc(100vw - 50px);
+    height: 75px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

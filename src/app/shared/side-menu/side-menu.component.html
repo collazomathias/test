@@ -1,0 +1,10 @@
+<div class="side-menu-container" [class.expanded]="toggle">
+    <div *ngIf="toggle" (click)="toggleCategoryList()" class="side-menu-toggle-icon"><i class="fa fa-xmark"></i></div>
+    <div *ngIf="!toggle" (click)="toggleCategoryList()" class="side-menu-toggle-icon"><i class="fa fa-bars"></i></div>
+    <ul>
+        <li *ngFor="let category of categoryList; first as first" [class.first]="first" [routerLink]="category.path + '/' + category.childrenPath" routerLinkActive="active" [title]="category.name">
+            <i [ngClass]="category.icon"></i>
+            <span>{{ category.name }}</span>
+        </li>
+    </ul>
+</div>
